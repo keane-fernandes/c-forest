@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<img src="./docs/logo.jpg/../forest.gif" width=15% />
+<img src="./docs/logo.jpg/../forest.gif" width=50% />
 </p>
 
 # Features
