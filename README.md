@@ -6,12 +6,11 @@
   <br>
 </h1>
 
-<h4 align="center">A 2D cellular automata developed in C to simulate the propogation of fires in a forest.</h4>
+<h4 align="center">A 2D cellular automata developed in C to simulate the propagation of fires in a forest.</h4>
 
 <p align="center">
   <a href="#Features">Features</a> |
-  <a href="#Usage">Usage</a> |
-  <a href="#Design">Design</a> |
+  <a href="#Overview">Overview</a> |
   <a href="#License">License</a>
 </p>
 
@@ -20,18 +19,31 @@
 </p>
 
 # Features
-- Tuning parameters such as tree growth rate and fire probability
+- Tuning parameters such as tree growth rate `(G)` and fire probability `(L)`
+- Test driven development using assertions
 - C99 compliant
-- Test driven development
 
 # Overview
-This project is a simple model of forest fires using a cellular automaton in the form a 2D grid of cells. Each cell can be in one of three states; either ‘empty’, ‘tree’, or ‘fire’. The next generation of cells follows these rules:
-- A ‘fire’ cell will turn into an ‘empty’ cell.
+This project is a simple model of forest fires using a cellular automaton in the form of a 2D grid of cells. Each cell can be in one of three states; either ‘empty’, ‘tree’, or ‘fire’. 
+
+Every discrete time step, the next generation of cells follow these rules:
+- A ‘fire’ cell will turn into an ‘empty’ cell
 - A ‘tree’ that is within the 8-neighbourhood of a ‘fire’ cell will itself become ‘fire’. 
-- A ‘tree’ will burn (due to a lightning strike) 1 time in `L`.
-- An ‘empty’ space will become a ‘tree’ (spontaneous growth) 1 time in `G`.
+- A ‘tree’ will burn (due to a lightning strike) 1 time in `L`
+- An ‘empty’ space will become a ‘tree’ (spontaneous growth) 1 time in `G`
 
 # Usage
+Ensure you have [GCC](https://gcc.gnu.org) installed on your machine. Once you have done so, run the following command on your terminal:
+
+```bash
+make forest
+```
+
+Run the executable by then typing in the following command on your terminal:
+
+```bash
+./forest
+```
 
 
 # License
