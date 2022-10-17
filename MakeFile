@@ -9,7 +9,7 @@ PRODUCTION= $(COMMON) -O3
 LDLIBS = -lm
 
 forest : forest.c neillsimplescreen.c neillsimplescreen.h
-	$(CC)  forest.c neillsimplescreen.c neillsimplescreen.h $(COMMON) -o forest
+	$(CC) neillsimplescreen.c forest.c -o forest
 
 clean:
-	rm forest
+	rm -f forest
